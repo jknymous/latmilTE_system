@@ -294,7 +294,7 @@ function searchLatihan() {
         return;
     }
 
-    // cari latihan modul cocok
+    // Cari latihan yang modulnya cocok
     for (const latihan of latihanData) {
         const modulStr = latihan.modul.map((m) => m.toLowerCase());
         const matchedModules = queryList.filter((q) => modulStr.includes(q));
@@ -307,10 +307,10 @@ function searchLatihan() {
         }
     }
 
-    // urutkan sesuai jumlah
+    // Urutkan hasil berdasarkan jumlah kecocokan modul (desc)
     results.sort((a, b) => b.matchedModules.length - a.matchedModules.length);
 
-    // warna bar kiri hasil rekomen
+    // Warnai bar kiri form input sesuai hasil pencarian
     for (const [i, input] of inputs.entries()) {
         const val = input.value.trim().toLowerCase();
         const formItem = formContainer.children[i];
@@ -326,7 +326,7 @@ function searchLatihan() {
     renderResults(results);
 }
 
-// masukan hasil ke ui
+// Render hasil pencarian ke UI
 function renderResults(results) {
     const resultsEl = document.getElementById("results");
     resultsEl.innerHTML = "";
@@ -378,7 +378,6 @@ function resetForm() {
     }
     // Tambah satu form kosong baru
     addForm();
-
     // Bersihkan hasil pencarian
     document.getElementById("results").innerHTML = "";
 }
