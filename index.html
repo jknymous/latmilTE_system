@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rekomendasi Latihan Militer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-gray-50 min-h-screen flex flex-col items-center p-6 font-sans">
+    <!-- Logo Panjang & Judul -->
+    <header class="w-full max-w-7xl mb-10 text-center">
+        <!-- Logo placeholder 3x5 ratio -->
+        <img src="top.png" alt="Logo 3x5" class="mx-auto mb-2 max-w-[240px] h-20 object-contain" />
+        <h1 class="text-2xl font-bold text-gray-800">Rekomendasi Latihan Militer</h1>
+    </header>
+
+    <!-- Form container with responsive grid -->
+    <main class="w-full max-w-7xl">
+        <form id="latihan-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" novalidate>
+            <!-- Form items will be added dynamically here -->
+        </form>
+
+        <div class="flex justify-center mt-4 gap-4">
+            <button type="button" id="add-form-btn"
+                class="bg-blue-600 hover:bg-blue-700 text-white rounded px-5 py-2 font-semibold transition"
+                aria-label="Tambah form input latihan">+ Tambah Form</button>
+            <button type="button" id="search-btn"
+                class="bg-green-600 hover:bg-green-700 text-white rounded px-5 py-2 font-semibold transition"
+                aria-label="Cari latihan">Cari Latihan</button>
+            <button type="button" id="reset-btn"
+                class="bg-red-500 hover:bg-red-600 text-white rounded px-5 py-2 font-semibold transition"
+                aria-label="Reset form dan hasil pencarian">Reset</button>
+        </div>
+
+        <section id="results" class="mt-10 max-w-7xl"></section>
+    </main>
+
+    <script src="app2.js"></script>
+</body>
+
+</html>
